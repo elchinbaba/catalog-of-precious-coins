@@ -21,6 +21,10 @@
     text-decoration: underline;
 }
 
+.return-homepage:hover {
+    cursor: pointer;
+}
+
 .search-label {
     display: block;
     font-weight: 500;
@@ -85,11 +89,11 @@
     justify-content: space-between;
 }
 
-.coin-photo {
+.coin-picture {
     width: 120px;
 }
 
-.coin-description {
+.coin-descript {
     width: 224px;
 }
 
@@ -99,6 +103,10 @@
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 5px;
+}
+
+.coin-header:hover {
+    cursor: pointer;
 }
 
 .coin-info {

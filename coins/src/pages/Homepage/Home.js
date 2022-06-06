@@ -1,12 +1,21 @@
 import React from 'react';
 
+import store from './../../redux/store';
+
 import Homepage from '../../components/Homepage/Homepage';
 import Homepage1 from '../../components/Homepage/Homepage1';
-import Homepage2 from '../../components/Homepage/Homepage2';
+import AdvancedFilter from '../../components/AdvancedFilter/AdvancedFilter';
 
 export default class Home extends React.Component {
     state = {
-        isFiltered: false
+        
+    }
+
+    componentDidMount() {
+        store.subscribe(_ => {
+            const state = store.getState();
+            this.setState({ isFiltered: state.isFiltered });
+        });
     }
 
     render() {
@@ -17,7 +26,7 @@ export default class Home extends React.Component {
                     !this.state.isFiltered?
                         <Homepage1 />
                         :
-                        <Homepage2 />
+                        <AdvancedFilter />
                 }
             </div>
         );
