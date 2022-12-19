@@ -16,9 +16,6 @@ export default class SearchBox extends React.Component {
     }
 
     searchChange = (event) => {
-        // store.dispatch({
-        //     type: "HAS_CHANGED"
-        // });
         store.dispatch({
             type: "CHANGE_SEARCH_VALUE",
             payload: event.target.value
@@ -26,7 +23,6 @@ export default class SearchBox extends React.Component {
     }
 
     searchClick = (event) => {
-        // event.preventDefault();
         const state = store.getState();
         localStorage.setItem("state", JSON.stringify({
             searchValue: state.searchValue,

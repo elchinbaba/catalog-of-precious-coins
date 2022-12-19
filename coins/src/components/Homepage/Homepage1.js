@@ -26,7 +26,6 @@ export default class Homepage1 extends React.Component {
             type: "COINTYPE",
             payload: 1
         });
-        // this.setState({ coinType: 1 });
         localStorage.setItem("coinType", JSON.stringify(store.getState().coinType));
     }
 
@@ -35,7 +34,6 @@ export default class Homepage1 extends React.Component {
             type: "COINTYPE",
             payload: 2
         });
-        // this.setState({ coinType: 2 });
         localStorage.setItem("coinType", JSON.stringify(store.getState().coinType));
     }
 
@@ -44,7 +42,6 @@ export default class Homepage1 extends React.Component {
             type: "COINTYPE",
             payload: 3
         });
-        // this.setState({ coinType: 3 });
         localStorage.setItem("coinType", JSON.stringify(store.getState().coinType));
     }
 

@@ -14,13 +14,6 @@ export default class AdvancedFilter extends React.Component {
         yearTo: ""
     }
 
-    // componentDidUpdate() {
-    //     const state = store.getState();
-    //     if (this.state.issuingCountry !== state["issuing-country"] || this.state.metal !== state.metal || this.state.quality !== state.quality)
-    //     this.setState({ issuingCountry: state["issuing-country"], metal: state.metal, quality: state.quality });
-    //     console.log(this.state, state);
-    // }
-
     componentDidMount() {
         store.subscribe(_ => {
             const state = store.getState();
@@ -29,9 +22,6 @@ export default class AdvancedFilter extends React.Component {
     }
 
     valueChange = (event) => {
-        // store.dispatch({
-        //     type: "HAS_CHANGED"
-        // });
         store.dispatch({
             type: "ADVANCED_FILTER",
             payload: event.target

@@ -30,12 +30,14 @@ app.get('/coins', function (req, res) {
 
 app.get('/coins/:id', function (req, res) {
     const id = +req.params.id;
-    const sql = `SELECT * FROM coins WHERE id=${id};SELECT * FROM coins_info WHERE coin_id=${id}`;
+    const sql = `SELECT * FROM coins WHERE id=${id}`;
     connection.query(sql, (err, results, fields) => {
-        if (err) return res.status(500);
-        // console.log(typeof results[1][0]);
+        if (err) {
+            console.log("hi");
+            return res.status(500);
+        }
         res.json(results);
-    });;
+    });
 });
 
 app.listen(5000, function () {
