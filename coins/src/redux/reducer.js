@@ -1,10 +1,5 @@
 const initialState = {
     coins: [
-        // {
-        //     header: 'Canadian Beaver',
-        //     info: '"Canadian beaver". Unique coin with the image of a beaver. Face value - 5 cents. Created under Elizabeth II.',
-        //     photo: require('./images/canadian-beaver.svg').default
-        // }
     ],
 
     currentCoin: {},
@@ -55,9 +50,6 @@ function reducer(state = initialState, action) {
         case 'COINTYPE':
             clone.coinType = action.payload;
             return clone;
-        // case 'HAS_CHANGED':
-        //     clone.hasChangedFilter = clone.searchValue !== "" || clone["issuing-country"] !== "all" || clone.metal !== "all" || clone.quality !== "bu";
-        //     return clone;
         default:
             return state;
     }

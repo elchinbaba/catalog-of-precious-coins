@@ -1,0 +1,1 @@
+CREATE DATABASE catalog_of_precious_coins;

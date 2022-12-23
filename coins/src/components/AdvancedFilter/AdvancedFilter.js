@@ -14,13 +14,6 @@ export default class AdvancedFilter extends React.Component {
         yearTo: ""
     }
 
-    // componentDidUpdate() {
-    //     const state = store.getState();
-    //     if (this.state.issuingCountry !== state["issuing-country"] || this.state.metal !== state.metal || this.state.quality !== state.quality)
-    //     this.setState({ issuingCountry: state["issuing-country"], metal: state.metal, quality: state.quality });
-    //     console.log(this.state, state);
-    // }
-
     componentDidMount() {
         store.subscribe(_ => {
             const state = store.getState();
@@ -29,9 +22,6 @@ export default class AdvancedFilter extends React.Component {
     }
 
     valueChange = (event) => {
-        // store.dispatch({
-        //     type: "HAS_CHANGED"
-        // });
         store.dispatch({
             type: "ADVANCED_FILTER",
             payload: event.target
@@ -47,25 +37,25 @@ export default class AdvancedFilter extends React.Component {
                             <select value={this.state.issuingCountry} name="issuing-country" id="issuing-country" onChange={this.valueChange}>
                                 <option value="all">All</option>
                                 <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
-                                <option value="vietnam">The Republic of Vietnam</option>
-                                <option value="british-south-africa">British South Africa</option>
+                                <option value="united states of america">USA</option>
+                                <option value="the republic of vietnam">The Republic of Vietnam</option>
+                                <option value="british south africa">British South Africa</option>
                                 <option value="estonia">Estonia</option>
-                                <option value="belgian-congo">The Belgian Congo</option>
+                                <option value="the belgian congo">The Belgian Congo</option>
                                 <option value="france">France</option>
                                 <option value="australia">Australia</option>
                                 <option value="bolivia">Bolivia</option>
                                 <option value="botswana">Botswana</option>
-                                <option value="british-virgin-islands">British Virgin Islands</option>
+                                <option value="british virgin islands">British Virgin Islands</option>
                                 <option value="ghana">Ghana</option>
-                                <option value="weimar">The Weimar Republic</option>
+                                <option value="the weimar republic">The Weimar Republic</option>
                                 <option value="egypt">Egypt</option>
                                 <option value="india">India</option>
                                 <option value="iran">Iran</option>
                                 <option value="iceland">Iceland</option>
                                 <option value="yemen">Yemen</option>
                                 <option value="china">China</option>
-                                <option value="costa-rica">Costa Rica</option>
+                                <option value="costa rica">Costa Rica</option>
                                 <option value="portugal">Portugal</option>
                             </select>
                     </div>
