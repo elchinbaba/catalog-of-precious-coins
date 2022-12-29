@@ -9,7 +9,7 @@ app.get('/coins', function (req, res) {
     connection.query(`SELECT * FROM coins`, (err, data) => {
         if (err) return res.status(500);
         res.json(data);
-    });;
+    });
 });
 
 app.get('/coins/:id', function (req, res) {
