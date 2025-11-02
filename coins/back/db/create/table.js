@@ -49,7 +49,7 @@ module.exports = (conn) => {
                 const count = result[0].count;
                 if (count !== 30) {
                     console.log("Coins table not full. Inserting initial data...");
-                    connection.query('DELETE FROM coins IF EXISTS coins;', (err, result) => {
+                    conn.query('DELETE FROM coins IF EXISTS coins;', (err, result) => {
                         if (err) {
                             console.error('Error dropping table:', err.message);
                         } else {
