@@ -49,11 +49,12 @@ module.exports = (conn) => {
                 const count = result[0].count;
                 if (count !== 30) {
                     console.log("Coins table not full. Inserting initial data...");
-                    conn.query('DELETE FROM coins IF EXISTS coins;', (err, result) => {
+                    conn.query('TRUNCATE TABLE coins;', (err, result) => {
                         if (err) {
-                            console.error('Error dropping table:', err.message);
+                            console.error('Error truncating table:', err.message);
                         } else {
-                            console.log('Table dropped successfully');
+                            console.log('Table truncated successfully');
+                            insertValues(conn); // insert initial data
                         }
                     });
                     insertValues(conn); // insert initial data
