@@ -47,8 +47,15 @@ module.exports = (conn) => {
                 }
 
                 const count = result[0].count;
-                if (count === 0) {
-                    console.log("Coins table is empty. Inserting initial data...");
+                if (count !== 0) {
+                    console.log("Coins table not full. Inserting initial data...");
+                    connection.query('DELETE FROM coins IF EXISTS coins;', (err, result) => {
+                        if (err) {
+                            console.error('Error dropping table:', err.message);
+                        } else {
+                            console.log('Table dropped successfully');
+                        }
+                    });
                     insertValues(conn); // insert initial data
                 } else {
                     console.log(`Coins table already has ${count} records. No insertion needed.`);
