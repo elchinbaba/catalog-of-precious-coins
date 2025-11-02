@@ -6,7 +6,7 @@ function getData(id) {
     if (arguments.length === 0)
         return async _ => {
             try {
-                let data = await fetch(`http://localhost:5000/coins`)
+                let data = await fetch(`https://catalog-of-precious-coins.onrender.com/coins`)
                 .then(res => res.json());
 
                 switch (state.coinType) {
@@ -49,7 +49,7 @@ function getData(id) {
     else if (arguments.length === 1) {
         return async _ => {
             try {
-                const data = await fetch(`http://localhost:5000/coins/${id}`)
+                const data = await fetch(`https://catalog-of-precious-coins.onrender.com/coins/${id}`)
                 .then(res => res.json());
 
                 store.dispatch({
