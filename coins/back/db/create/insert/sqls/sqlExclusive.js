@@ -1,6 +1,6 @@
 module.exports = `INSERT INTO coins
 (type, name, description, information, issuing_country, composition,
-quality, denomition, year, weight, price, first, second)
+quality, denomination, year, weight, price, first, second)
 VALUES
 ('exclusive','Lion sedge',
 'Indian coin with the image of a lion Ashoka. Face value 1 one rupee. 1975 edition.',
