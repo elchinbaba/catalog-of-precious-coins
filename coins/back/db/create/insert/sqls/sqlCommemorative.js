@@ -1,6 +1,6 @@
 module.exports = `INSERT INTO coins
 (type, name, description, information, issuing_country, composition,
-quality, denomition, year, weight, price, first, second)
+quality, denomination, year, weight, price, first, second)
 VALUES
 ('commemorative','Canadian Beaver',
 '"Canadian beaver". Unique coin with the image of a beaver. Face value - 5 cents. Created under Elizabeth II.',
