@@ -8,7 +8,8 @@ const connection = mysql.createConnection({
   port: process.env.DB_PORT || 3306,
   ssl: {
     rejectUnauthorized: false // allows self-signed cert from Aiven
-  }
+  },
+  multipleStatements: true
 });
 
 module.exports = connection;
