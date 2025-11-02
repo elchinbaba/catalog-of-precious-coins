@@ -1,6 +1,6 @@
 module.exports = `INSERT INTO coins
 (type, name, description, information, issuing_country, composition,
-quality, denomition, year, weight, price, first, second)
+quality, denomination, year, weight, price, first, second)
 VALUES
 ('bullion','South Vietnamese Dong',
 'Currency of the Republic of Vietnam in 1955-1975 Coin with the image of wheat.',
